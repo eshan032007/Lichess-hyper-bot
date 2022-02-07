@@ -1,10 +1,10 @@
-token: "lip_MnMfAW6oYLEKuHThW5gt"    # Lichess OAuth2 Token.
+token: "lip_ZUAQtclg5dQ4UPiVHWA9"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
   dir: "./engines/"          # Directory containing engines, relative to this project.
-  name: "fsf"        # Binary name of the engine to use.
-  sfname: "stockfish_14.1_linux_x64_popcnt"
+  name: "stockfish.exe"        # Binary name of the engine to use.
+  sfname: "stockfish"
   protocol: "uci"            # "uci" or "xboard"
   ponder: true               # Think on opponent's time.
   polyglot:
@@ -25,7 +25,7 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256  
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 5000      # Increase if your bot flags games too often.
+    Move Overhead: 1198      # Increase if your bot flags games too often.
     Threads: 1               # Max CPU threads the engine can use.
     Hash: 256                # Max memory (in megabytes) the engine can allocate.
 #   go_commands:             # Additional options to pass to the UCI go command.
@@ -68,20 +68,20 @@ challenge:                   # Incoming challenges.
   variants:                  # Chess variants to accept (https://lichess.org/variant).
     - standard
 #   - fromPosition
-    - antichess
-    - atomic
+#    - antichess
+#    - atomic
     - chess960
-    - crazyhouse
-    - horde
-    - kingOfTheHill
-    - racingKings
-    - threeCheck
+#    - crazyhouse
+#    - horde
+#    - kingOfTheHill
+#    - racingKings
+#    - threeCheck
   time_controls:             # Time controls to accept.
     - bullet
     - blitz
     - rapid
-#   - classical
-#   - correspondence
+   - classical
+   - correspondence
   modes:                     # Game modes to accept.
     - casual                 # Unrated games.
-    - rated                  # Rated games - must comment if the engine doesn't try to win.
+#    - rated                  # Rated games - must comment if the engine doesn't try to win.
