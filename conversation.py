@@ -26,14 +26,14 @@ class Conversation:
             self.send_reply(line, "Waiting 60 seconds...")
         elif cmd == "name":
             name = game.me.name
-            self.send_reply(line, "{} running {} (lichess-bot v{})".format(name, self.engine.name(), self.version))
+            self.send_reply(line, "{} running {} (lichess-bot v{} Programmed by @EshanHasaranga200703)".format(name, self.engine.name(), self.version))
         elif cmd == "howto":
-            self.send_reply(line, "How to run your own bot: Check out 'Lichess Bot API'")
+            self.send_reply(line, "How to run your own bot: Check out blog by @EshanHasaranga200703 about 'making lichess bots'")
         elif cmd == "eval" and line.room == "spectator":
             stats = self.engine.get_stats()
             self.send_reply(line, ", ".join(stats))
         elif cmd == "eval":
-            self.send_reply(line, "I don't tell that to my opponent, sorry.")
+            self.send_reply(line, ", ".join(stats))
         elif cmd == "queue":
             if self.challengers:
                 challengers = ", ".join(["@" + challenger.challenger_name for challenger in reversed(self.challengers)])
